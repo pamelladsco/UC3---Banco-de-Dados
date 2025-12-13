@@ -1,0 +1,110 @@
+/* Lógico_1: */
+
+CREATE TABLE Order_Client (
+    ID_Order NUMERIC,
+    Payment_Method VARCHAR,
+    fk_Delivery_Status_Delivery_Status_PK VARCHAR,
+    Email VARCHAR,
+    Delivery_Address VARCHAR,
+    Name VARCHAR,
+    ID_Client NUMERIC,
+    PRIMARY KEY (ID_Order, ID_Client)
+);
+
+CREATE TABLE Stock (
+    ID_Stock NUMERIC PRIMARY KEY,
+    Avaliable_Quantity NUMERIC
+);
+
+CREATE TABLE Category (
+    Name VARCHAR,
+    ID_Category NUMERIC PRIMARY KEY
+);
+
+CREATE TABLE Provider (
+    Contact VARCHAR,
+    Name VARCHAR,
+    ID_Provider NUMERIC PRIMARY KEY
+);
+
+CREATE TABLE Product_Order_Product (
+    Quantity NUMERIC,
+    Price NUMERIC,
+    ID_Product NUMERIC PRIMARY KEY,
+    Name VARCHAR,
+    fk_Stock_ID_Stock NUMERIC,
+    fk_Category_ID_Category NUMERIC,
+    fk_Order_Client_ID_Order NUMERIC,
+    fk_Order_Client_ID_Client NUMERIC
+);
+
+CREATE TABLE Regular_Client (
+    Register_Date DATE,
+    Loyalty_Discount NUMERIC,
+    fk_Client_ID_Client NUMERIC PRIMARY KEY
+);
+
+CREATE TABLE Vip_Client (
+    Register_Date DATE,
+    Vip_Lavel VARCHAR,
+    fk_Client_ID_Client NUMERIC PRIMARY KEY
+);
+
+CREATE TABLE Corp_Client (
+    CNPJ NUMERIC,
+    Credit_Limit NUMERIC,
+    Company_Name VARCHAR,
+    fk_Client_ID_Client NUMERIC PRIMARY KEY
+);
+
+CREATE TABLE Delivery_Status (
+    Delivery_Status_PK VARCHAR NOT NULL PRIMARY KEY,
+    Placed VARCHAR,
+    Dispatched VARCHAR,
+    Delivered VARCHAR,
+    Ready_Pickup VARCHAR,
+    Canceled VARCHAR
+);
+
+CREATE TABLE Supply (
+    fk_Product_ID_Product NUMERIC,
+    fk_Provider_ID_Provider NUMERIC
+);
+ 
+ALTER TABLE Order_Client ADD CONSTRAINT FK_Order_Client_2
+    FOREIGN KEY (fk_Delivery_Status_Delivery_Status_PK)
+    REFERENCES Delivery_Status (Delivery_Status_PK)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Product_Order_Product ADD CONSTRAINT FK_Product_Order_Product_2
+    FOREIGN KEY (fk_Stock_ID_Stock)
+    REFERENCES Stock (ID_Stock);
+ 
+ALTER TABLE Product_Order_Product ADD CONSTRAINT FK_Product_Order_Product_3
+    FOREIGN KEY (fk_Category_ID_Category)
+    REFERENCES Category (ID_Category);
+ 
+ALTER TABLE Product_Order_Product ADD CONSTRAINT FK_Product_Order_Product_4
+    FOREIGN KEY (fk_Order_Client_ID_Order, fk_Order_Client_ID_Client)
+    REFERENCES Order_Client (ID_Order, ID_Client);
+ 
+ALTER TABLE Regular_Client ADD CONSTRAINT FK_Regular_Client_2
+    FOREIGN KEY (fk_Client_ID_Client)
+    REFERENCES ??? (???);
+ 
+ALTER TABLE Vip_Client ADD CONSTRAINT FK_Vip_Client_2
+    FOREIGN KEY (fk_Client_ID_Client)
+    REFERENCES ??? (???);
+ 
+ALTER TABLE Corp_Client ADD CONSTRAINT FK_Corp_Client_2
+    FOREIGN KEY (fk_Client_ID_Client)
+    REFERENCES ??? (???);
+ 
+ALTER TABLE Supply ADD CONSTRAINT FK_Supply_1
+    FOREIGN KEY (fk_Product_ID_Product)
+    REFERENCES ??? (???);
+ 
+ALTER TABLE Supply ADD CONSTRAINT FK_Supply_2
+    FOREIGN KEY (fk_Provider_ID_Provider)
+    REFERENCES Provider (ID_Provider)
+    ON DELETE RESTRICT;
