@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<DIAGRAMA ID="1" TIPO="tpLogico" UniversalUnicID="1A5F-5B-38FE-4B-FE79-5D-B4">
+<DIAGRAMA ID="1" TIPO="tpLogico" UniversalUnicID="DC25-67-A01C-20-936B-68-3C">
     <InfoDiagrama ID="1">
         <Versao Valor="3.2.0"/>
         <Autores/>
@@ -10,13 +10,13 @@
         <Alinhamento_h Valor="60"/>
         <Zoom Valor="100"/>
         <Fonte Estilo="1" Nome="Arial" Tamanho="12"/>
-        <Localizacao Left="0" Top="98"/>
+        <Localizacao Left="0" Top="58"/>
         <Realce Valor="false"/>
         <SeparatorSQL Valor=";"/>
         <Prefixo Valor=""/>
     </InfoDiagrama>
     <Tabela ID="3">
-        <Bounds Height="149" Left="213" Top="85" Width="150"/>
+        <Bounds Height="149" Left="213" Top="85" Width="159"/>
         <DisablePainted Valor="false"/>
         <Texto>Jogo</Texto>
         <Observacao/>
@@ -44,7 +44,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_jogo</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -54,7 +54,7 @@
             </Campo>
             <Campo>
                 <Texto>Nome_Jogo</Texto>
-                <Tipo>String</Tipo>
+                <Tipo>String(60)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -64,7 +64,7 @@
             </Campo>
             <Campo>
                 <Texto>Categoria</Texto>
-                <Tipo>String</Tipo>
+                <Tipo>String(20)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -74,7 +74,7 @@
             </Campo>
             <Campo>
                 <Texto>Data_Lançamento</Texto>
-                <Tipo>String(8)</Tipo>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -126,7 +126,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Cenario</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -136,7 +136,7 @@
             </Campo>
             <Campo>
                 <Texto>Nome_Cenario</Texto>
-                <Tipo>String</Tipo>
+                <Tipo>String(160)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -146,7 +146,7 @@
             </Campo>
             <Campo>
                 <Texto>Tipo_Cenario</Texto>
-                <Tipo>String</Tipo>
+                <Tipo>String(160)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -170,7 +170,7 @@
         </Constraints>
     </Tabela>
     <Tabela ID="8">
-        <Bounds Height="171" Left="44" Top="259" Width="150"/>
+        <Bounds Height="171" Left="44" Top="259" Width="176"/>
         <DisablePainted Valor="false"/>
         <Texto>Usuario</Texto>
         <Observacao/>
@@ -198,7 +198,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Jogo</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -208,7 +208,7 @@
             </Campo>
             <Campo>
                 <Texto>Nome_Jogador</Texto>
-                <Tipo>String</Tipo>
+                <Tipo>String(160)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -228,7 +228,7 @@
             </Campo>
             <Campo>
                 <Texto>Senha_Jogador</Texto>
-                <Tipo>String</Tipo>
+                <Tipo>String(15)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -238,7 +238,7 @@
             </Campo>
             <Campo>
                 <Texto>Data_Criacao_Conta</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -262,7 +262,7 @@
         </Constraints>
     </Tabela>
     <Tabela ID="9">
-        <Bounds Height="127" Left="268" Top="359" Width="150"/>
+        <Bounds Height="127" Left="268" Top="359" Width="194"/>
         <DisablePainted Valor="false"/>
         <Texto>Personagem</Texto>
         <Observacao/>
@@ -290,7 +290,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Personagem</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -300,7 +300,7 @@
             </Campo>
             <Campo>
                 <Texto>Nome_Personagem</Texto>
-                <Tipo>String</Tipo>
+                <Tipo>String(160)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -310,7 +310,7 @@
             </Campo>
             <Campo>
                 <Texto>Poder_Especial</Texto>
-                <Tipo>String</Tipo>
+                <Tipo>String(160)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -362,7 +362,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Jogo</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -372,7 +372,7 @@
             </Campo>
             <Campo>
                 <Texto>ID_Jogador</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -382,7 +382,7 @@
             </Campo>
             <Campo>
                 <Texto>Posicao_Ranking</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(4)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -392,7 +392,7 @@
             </Campo>
             <Campo>
                 <Texto>Pontuacao_Total</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(4)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -444,7 +444,7 @@
         <Campos>
             <Campo>
                 <Texto>ID_Partida</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -453,8 +453,8 @@
                 <Unique Valor="false"/>
             </Campo>
             <Campo>
-                <Texto>ID_Jogo</Texto>
-                <Tipo>Number</Tipo>
+                <Texto>ID_Jogo(8)</Texto>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -464,7 +464,7 @@
             </Campo>
             <Campo>
                 <Texto>ID_Usuario</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(8)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -484,7 +484,7 @@
             </Campo>
             <Campo>
                 <Texto>Pontuacao</Texto>
-                <Tipo>Number</Tipo>
+                <Tipo>Number(10)</Tipo>
                 <Complemento/>
                 <Dicionario/>
                 <Observacao/>
@@ -568,14 +568,14 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="8" PontaB="9"/>
         <Pontos>
-            <Ponto Left="125" Top="427"/>
+            <Ponto Left="125" Top="428"/>
             <Ponto Left="125" Top="437"/>
-            <Ponto Left="228" Top="437"/>
-            <Ponto Left="228" Top="416"/>
+            <Ponto Left="241" Top="437"/>
+            <Ponto Left="241" Top="416"/>
             <Ponto Left="264" Top="416"/>
         </Pontos>
         <LogicoCardinalidade ID="25">
-            <Bounds Height="14" Left="92" Top="437" Width="35"/>
+            <Bounds Height="14" Left="92" Top="438" Width="35"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_3</Texto>
             <Observacao/>
@@ -617,13 +617,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="9" PontaB="14"/>
         <Pontos>
-            <Ponto Left="415" Top="454"/>
-            <Ponto Left="482" Top="454"/>
-            <Ponto Left="482" Top="454"/>
+            <Ponto Left="460" Top="454"/>
+            <Ponto Left="504" Top="454"/>
+            <Ponto Left="504" Top="454"/>
             <Ponto Left="548" Top="454"/>
         </Pontos>
         <LogicoCardinalidade ID="30">
-            <Bounds Height="14" Left="425" Top="442" Width="35"/>
+            <Bounds Height="14" Left="470" Top="442" Width="35"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_5</Texto>
             <Observacao/>
@@ -665,13 +665,13 @@
         <Largura Valor="1"/>
         <Ligacoes PontaA="3" PontaB="6"/>
         <Pontos>
-            <Ponto Left="360" Top="144"/>
-            <Ponto Left="415" Top="144"/>
-            <Ponto Left="415" Top="144"/>
+            <Ponto Left="370" Top="144"/>
+            <Ponto Left="419" Top="144"/>
+            <Ponto Left="419" Top="144"/>
             <Ponto Left="469" Top="144"/>
         </Pontos>
         <LogicoCardinalidade ID="33">
-            <Bounds Height="14" Left="370" Top="132" Width="35"/>
+            <Bounds Height="14" Left="380" Top="132" Width="35"/>
             <DisablePainted Valor="false"/>
             <Texto>Cardinalidade_7</Texto>
             <Observacao/>
